@@ -44,12 +44,45 @@ class C extends A implements B{
         
     }
 }
+
+class D extends A{
+    void method(D q) {
+        System.out.println("qqqqqq");
+
+    }
+    void method(A a) {
+        System.out.println("fesgrg");
+
+    }
+    public D() {
+        System.out.println("public");
+
+    }
+    public void display() {
+        // TODO Auto-generated method stub
+        System.out.println("This is the sub-class");
+        
+    }
+}
+class E extends A{
+    E() {
+
+    }
+    public void display() {
+        // TODO Auto-generated method stub
+        System.out.println("This is the sub-class");
+        
+    }
+}
 public class Inherit {
     public static void main(String[] args) {
         Child ch = new Child();
         ch.Car();//single inheritance
         C c = new C();
         c.display();
+        // D w = new D();
+        A a = new D();
+       // a.method(a);
         System.out.println(c instanceof C);
     }
 }
